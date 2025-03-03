@@ -29,7 +29,6 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 ### Web Recon
 * Server: Apache 2.4.45
 * Tech Stack: PHP, Wordpress CMS (5.1.1), MySQL
-* 
 ### WPScan
 ```
 [+] Headers
