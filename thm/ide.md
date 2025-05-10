@@ -68,7 +68,7 @@ The exploit is related to how Codiad processes file uploads and the lack of prop
 I used the Codiad RCE exploit to get an initial foothold in the machine.
 ### Privilege Escalation
 Looking through the machine I found another user drac, and in his home directory he did not clean up his .bash_history file so I was able to read through it and found a MySQL database password with his username.
-I tested for credential reusage and was successful, I now have a real user compromised.
+I tested for credential reusage and was successful, I now have a real user compromised.\
 **Privilege Escalation via .service files**\
 As the user drac I had sudo permissions on the vsftpd service, more importantly I could restart it with sudo.
 So with this information I could try and change the vsftpd.service file to execute a reverse shell when I restart it.
