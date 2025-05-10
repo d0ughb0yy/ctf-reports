@@ -88,5 +88,5 @@ WantedBy=multi-user.target
 ```
 If you restart it now you will get an error, but just execute what the error tells you and restart vsftpd again but don't forget to setup your listener otherwise the shell won't work and you get root.
 ## Notes
-**Privilege Escalation via editing .service files**
+**Privilege Escalation via editing .service files**\
 Using .service files an attacker if they have permissions, modify files and execute unwanted commands. Like in this case I modified the vsftpd.service file in a way that when the ftp service starts it will give my current user sudo permissions for the whole system. So I could just sudo su and get root.
