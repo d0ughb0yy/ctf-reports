@@ -73,6 +73,10 @@ After setting the custom action that will perform after banning an IP, I just ha
 
 ![command_for_privesc](../pictures/billing/privesc.png)
 
+After banning an IP, I can run /bin/bash as the privileged user and get the root shell.
+
+![root_shell](../pictures/billing/root.png)
+
 ## Journal
 https://juggernaut-sec.com/fail2ban-lpe/
 * Article for privilege escalation via fail2ban
