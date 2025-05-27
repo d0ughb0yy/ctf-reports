@@ -104,6 +104,8 @@ using the dashboard.
 
 After uploading I had to visit a specific .php file printed after setting up the plugin and I got a reverse shell as a service user.
 
+![service_user](../pictures/mr-robot/initial_foothold.png)
+
 #### Moving to a real user
 In robot's home directory there was a file named password.raw-md5 containing his password in a hashed format.
 
