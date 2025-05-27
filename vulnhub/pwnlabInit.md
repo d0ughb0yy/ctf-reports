@@ -51,7 +51,7 @@ PORT      STATE SERVICE VERSION
 
 **/?page=**
 ```
-I exploited an LFI on this parameter using php:// like in the article:
+I exploited an LFI on this parameter using php:// wrappers like in the article:
 https://diablohorn.com/2010/01/16/interesting-local-file-inclusion-method/
 
 I used this LFI technique to access config.php which contained db credentials
@@ -75,7 +75,8 @@ $database = "Users";
 ## Getting a Shell ##
 
 GIF87a --> Insert GIF format to bypass file type check
-Also change content type and extension
+Also change content type and extension:\
+*Content-Type: image/gif*
 
 To execute the shell I found an optional cookie **lang=** which looked vulnerable to LFI so
 when I used it to execute my shell I was successful.
@@ -97,6 +98,6 @@ As mike I saw another binary with a “sticky bit”, this time called msg2root.
 Using this I got root privileges on my other listener.
 
 ## Notes
-* If it’s run by PHP try the ```php://filter/convert.base64-encode/``` and maybe you get some results. 
+* If it’s run by PHP try the ```php://filter/convert.base64-encode/``` as an LFI payload 
 * Using PHP Protocol Wrappers you tell PHP to use the HTTP POST data as the entry point for it’s include*
 * Directly accessing the file was not able to execute my PHP reverse shell so a cookie vulnerable to LFI was used to execute it
