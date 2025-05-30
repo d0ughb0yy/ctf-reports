@@ -259,7 +259,7 @@ I was able to elevate my privileges due to the iisapppool service having SeImper
 ![privilege_escalation_opportunity](../pictures/relevant/winpeas_privesc.png)
 
 
-On google there is loads of exploits exploiting this privilege, I use the Print Spoofer exploit.
+On google there is loads of exploits exploiting this privilege, I used the Print Spoofer exploit.
 First I downloaded the exploit from:
 ```
 https://github.com/itm4n/PrintSpoofer/releases/download/v1.0/PrintSpoofer64.exe
@@ -269,7 +269,7 @@ I used the same method as with the reverse shell payload, uploaded it to the ser
 
 ![uploading_exploit](../pictures/relevant/exploit_upload.png)
 
-After I have it on the Windows machine, I have to run it with the context of executing a command, so to get and Administrator shell I used:
+After I have it on the Windows machine, I have to run it with the context of executing a command, so to get an Administrator shell I used:
 ```
 PrintSpoofer64.exe -i -c powershell.exe
 ```
