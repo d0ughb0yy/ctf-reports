@@ -98,9 +98,6 @@ Host script results:
 |_smb-vuln-ms10-054: false
 ```
 
-
-===============================================================
-
 ## Recon:
 
 ### SMB:
@@ -202,9 +199,6 @@ Current Token privileges
 
 ```
 
-
-===============================================================
-
 ## Foothold / Privilege Escalation:
 
 ### Initial Foothold
@@ -276,8 +270,6 @@ PrintSpoofer64.exe -i -c powershell.exe
 And this gave me the Administrator powershell, gaining access to the Administrator folder.
 
 ![administrator_user_achieved](../pictures/relevant/administrator.png)
-
-===============================================================
 
 ## Journal:
 

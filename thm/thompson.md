@@ -16,8 +16,6 @@ jack
 tomcat:s3cret
 ```
 
-===============================================================
-
 ## Port Scan:
 
 ```
@@ -39,8 +37,6 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 - Apache Jserv (Protocol v1.3)
 - Apache Tomcat 8.5.5
 
-===============================================================
-
 ## Content Discovery:
 
 ### Port 8080:
@@ -54,8 +50,6 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 # m h dom mon dow user  command
 *  *    * * *   root    cd /home/jack && bash id.sh
 ```
-
-===============================================================
 
 ## Foothold / Privilege Escalation:
 
@@ -108,8 +102,6 @@ After the cron job executes I get a root shell by either of the methods.
 ![privilege escalation](../pictures/thompson/privesc.png)
 
 ![root shell](../pictures/thompson/root.png)
-
-===============================================================
 
 ## Journal:
 - Check cron jobs and what permissions do I have on the files they are running

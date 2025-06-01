@@ -87,8 +87,6 @@ Host script results:
 
 ```
 
-===============================================================
-
 ## Recon:
 
 ### SMB:
@@ -185,7 +183,6 @@ Windows
 Port 8080 is an HTTP server running an oscommerce 2.3.4 CMS which is vulnerable to Unauthenticated Remote Code Execution by injecting a PHP payload into the db_database parameter of the install.php and read the system command output from configure.php.
 https://www.exploit-db.com/exploits/50128
 
-===============================================================
 ## Foothold / Privilege Escalation:
 
 ### Initial Foothold:
@@ -207,8 +204,6 @@ I found a working script on the exploit-db.com site and used it's syntax to get 
 
 As I ran the exploit and got a shell, I ran `whoami` and found that the RCE exploit
 gives an Administrator shell. I could just into the Administrator directory and extract the root flag.
-
-===============================================================
 
 ## Journal:
 ### User NTLM Hashes:
