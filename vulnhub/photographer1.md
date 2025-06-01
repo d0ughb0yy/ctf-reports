@@ -254,14 +254,34 @@ Ubuntu 16.04.6 LTS
 
 I was able to guess Koken CMS admin credentials through a misconfigured SMB share, which allowed anonymous login and contained a hint to admin credentials.
 
-I got initial access through the vulnerable version of Koken CMS, which was vulnerable to an Authenticated File Upload Vulnerability. The input validation on file uploads depends only on whitelisting the extensions, I can edit the request with Burp and bypass this.\
+![smb_enumeration](../pictures/photographer1/smb_enum_and_login.png)
+
+![password_hint](../pictures/photographer1/mail_file.png)
+
+![koken_admin_log_in](../pictures/photographer1/koken_log_in.png)
+
+I got initial access through the vulnerable version of Koken CMS, which was vulnerable to an Authenticated File Upload Vulnerability. The input validation on file uploads depends only on whitelisting the extensions, I can edit the request with Burp and bypass this.
+
+I first used pentest monkey's php reverse shell script and renamed it to reverse-shell.php.jpg, after I intercepted the uploading request and renamed the file back to reverse-shell.php.
+
+![koken_vulnerability](../pictures/photographer1/request_file_rename.png)
+
+After uploading, I found the location of the shell by hovering over the download file button, setup a listener and visited it to execute it and get initial access.
+
+![listener_setup](../pictures/photographer1/listener_setup.png)
+
+![initial_access](../pictures/photographer1/initial_access.png)
+
 [ExploitDB exploit](https://www.exploit-db.com/exploits/48706)
 
 ---
 
 ### Privilege Escalation:
 
-While enumerating as the www-data user, I found that the binary **/usr/bin/php7.2** had a SUID bit set meaning it does not drop the elevated privileges and may be abused to access the file system, escalate or maintain privileged access as a SUID backdoor. 
+While enumerating as the www-data user, I found that the binary **/usr/bin/php7.2** had a SUID bit set meaning it does not drop the elevated privileges and may be abused to access the file system, escalate or maintain privileged access as a SUID backdoor.
+
+![suid_binaries](../pictures/photographer1/suid_binaries.png)
+
 I searched on gtfobins and found an entry which I modifed into:
 ```
 $ CMD="/bin/sh"
@@ -269,6 +289,8 @@ $ php7.2 -r "pcntl_exec('/bin/sh', ['-p']);"
 #
 ```
 [GTFObins link](https://gtfobins.github.io/gtfobins/php/#suid)
+
+![privilege_escalation](../pictures/photographer1/root.png)
 
 
 ## Journal:
