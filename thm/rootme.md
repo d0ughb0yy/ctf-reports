@@ -10,8 +10,6 @@
 `rootme`\
 `test`
 
-===============================================================
-
 ## Port Scan:
 
 ```
@@ -31,8 +29,6 @@ PORT   STATE SERVICE VERSION
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 ```
-
-===============================================================
 
 ## Recon:
 
@@ -64,7 +60,7 @@ server-status           [Status: 403, Size: 277, Words: 20, Lines: 10]
 ```
 - Found the /panel directory which hosts the upload form
 
-===============================================================
+
 
 ## Foothold / Privilege Escalation:
 

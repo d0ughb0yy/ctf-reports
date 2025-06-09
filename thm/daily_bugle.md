@@ -22,8 +22,6 @@ Joomla:
 Server:
 `jjameson:nv5uz9r3ZEDzVjNu`
 
-===============================================================
-
 ## Port Scan:
 
 ```
@@ -43,8 +41,6 @@ PORT     STATE SERVICE VERSION
 |_/layouts/ /libraries/ /logs/ /modules/ /plugins/ /tmp/
 3306/tcp open  mysql   MariaDB 10.3.23 or earlier (unauthorized)
 ```
-
-===============================================================
 
 ## Recon:
 
@@ -79,9 +75,6 @@ Disallow: /modules/
 Disallow: /plugins/
 Disallow: /tmp/
 ```
-
-
-===============================================================
 
 ## Foothold / Privilege Escalation:
 
@@ -137,8 +130,6 @@ I looked through gtfobins and found this technique:
 I followed instructions and was successful in getting the root user.
 
 ![root_user](../pictures/daily_bugle/root.png)
-
-===============================================================
 
 ## Journal:
 **SQLi python script:**
