@@ -1,3 +1,5 @@
+# Daily Bugle
+
 **Hostname:**
 `dailybugle`
 

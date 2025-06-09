@@ -1,3 +1,5 @@
+# Blueprint
+
 **Hostname:** `BLUEPRINT`
 
 **OS:** Windows 7
