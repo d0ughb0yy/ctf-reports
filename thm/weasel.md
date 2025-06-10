@@ -15,8 +15,6 @@ with
 **Credentials:**
 `dev-datasci-lowpriv:wUqnKWqzha*W!PWrPRWi!M8faUn`
 
-===============================================================
-
 ## Port Scan:
 
 ```
@@ -74,8 +72,6 @@ Host script results:
 
 ```
 
-===============================================================
-
 ## Recon:
 
 ### SMB:
@@ -123,7 +119,6 @@ IPC$            READ            Remote IPC
 **Technologies:**
 `Jupyter Notebook`
 
-===============================================================
 
 ## Foothold / Privilege Escalation:
 
@@ -196,8 +191,6 @@ mount -t drvfs 'c:' /mnt/c
 ```
 
 This will enable me to traverse the Windows C drive and access the Administrator user directory from inside the WSL container.
-
-===============================================================
 
 ## Journal:
 
