@@ -62,17 +62,17 @@ Disallow: /umbraco_client/
 
 ### Initial Foothold
 
-I was able to get initial access first due to an exposed password in robots.txt then credential reusage. Umbraco admin used the same password as for his server credentials and I was able to RDP in.
+A post with a poem hinted to the name of the admin 'Solomon Grundy' and the other post leaked the email of another user `JD@anthem.com` which indicated to the email templating used by the company leading to the admin email: `SG@anthem.com`
 
-A post with a poem hinted to the name of the admin 'Solomon Grundy' and another post leaked the email of another user JD@anthem.com which indicates to email templating of the company leading to an admin email of SG@anthem.com
+I was able to get initial access first due to an exposed password in robots.txt file and then followed by credential reusage. Umbraco admin used the same password for his RDP credentials and I was able to RDP in.
 
 ---
 
 ### Privilege Escalation:
 
-I was able to get Administrator due to misconfigured backup folder which allowed access to anyone. I checked the file inside and found the Administrator password but first I had to give myself permissions for the file.
+I was able to get Administrator due to misconfigured backup folder which allowed access to anyone. I checked the file but no one could open it. I had to give myself permissions to be able to open the file. After opening I found the Administrator password.
 
 
 ## Journal:
 
-**When connecting with RDP to a machine remember to enable viewing of hidden files**
+**When enumerating Windows machines remember to enable hidden files and directories.**
