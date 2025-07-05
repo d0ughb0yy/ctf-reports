@@ -287,7 +287,9 @@ used_cpu_user_children:0.00
 122) ""
 ```
 
-**Bloodhound Enumeration**
+### Bloodhound Enumeration
+
+![bloodhound_recon_data](../pictures/vulnnet-active/bloodhound_privesc_data.png)
 
 
 
